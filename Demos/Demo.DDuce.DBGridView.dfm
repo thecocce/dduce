@@ -11,9 +11,7 @@ object frmDBGridView: TfrmDBGridView
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object splMain: TSplitter
     Left = 0
@@ -23,7 +21,6 @@ object frmDBGridView: TfrmDBGridView
     Cursor = crVSplit
     Align = alBottom
     ResizeStyle = rsLine
-    ExplicitTop = 341
   end
   object pnlLog: TPanel
     Left = 0
@@ -40,7 +37,7 @@ object frmDBGridView: TfrmDBGridView
     Top = 34
     Width = 867
     Height = 303
-    ActivePage = tsDBGridViewEvents
+    ActivePage = tsDBGridView
     Align = alClient
     TabOrder = 2
     object tsDBGridView: TTabSheet
@@ -69,7 +66,7 @@ object frmDBGridView: TfrmDBGridView
           BevelOuter = bvNone
           BorderStyle = bsNone
           Columns = 4
-          ItemHeight = 13
+          ItemHeight = 17
           Items.Strings = (
             'OnCellAcceptCursor'
             'OnCellClick'

@@ -11,8 +11,6 @@ object frmReflect: TfrmReflect
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlReflected: TPanel
     AlignWithMargins = True

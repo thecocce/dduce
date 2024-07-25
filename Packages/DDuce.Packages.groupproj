@@ -12,6 +12,9 @@
         <Projects Include="DDuce.Modules.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\Demos\DDuce.Demos.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="DDuce_Modules:Make">
         <MSBuild Projects="DDuce.Modules.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DDuce_Demos">
+        <MSBuild Projects="..\Demos\DDuce.Demos.dproj"/>
+    </Target>
+    <Target Name="DDuce_Demos:Clean">
+        <MSBuild Projects="..\Demos\DDuce.Demos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DDuce_Demos:Make">
+        <MSBuild Projects="..\Demos\DDuce.Demos.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DDuce_Core;DDuce_Components;DDuce_Modules"/>
+        <CallTarget Targets="DDuce_Core;DDuce_Components;DDuce_Modules;DDuce_Demos"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DDuce_Core:Clean;DDuce_Components:Clean;DDuce_Modules:Clean"/>
+        <CallTarget Targets="DDuce_Core:Clean;DDuce_Components:Clean;DDuce_Modules:Clean;DDuce_Demos:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DDuce_Core:Make;DDuce_Components:Make;DDuce_Modules:Make"/>
+        <CallTarget Targets="DDuce_Core:Make;DDuce_Components:Make;DDuce_Modules:Make;DDuce_Demos:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
     <ItemGroup Condition="'$(BuildGroup)'=='BG'">
@@ -75,6 +87,12 @@
             <Configurations>Debug;Release</Configurations>
             <Platforms>Win32</Platforms>
             <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="..\Demos\DDuce.Demos.dproj">
+            <ProjectGuid>{BFB745CB-E544-4260-815C-946F258DE59F}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>False</Enabled>
         </BuildGroupProject>
     </ItemGroup>
 </Project>

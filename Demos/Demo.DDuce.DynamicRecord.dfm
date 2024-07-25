@@ -10,9 +10,7 @@ object frmDynamicRecords: TfrmDynamicRecords
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   ShowHint = True
-  PixelsPerInch = 96
   TextHeight = 13
   object splHorizontal: TSplitter
     Left = 0
@@ -223,7 +221,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Width = 64
             Height = 21
             EditLabel.Width = 49
-            EditLabel.Height = 13
+            EditLabel.Height = 21
             EditLabel.Caption = 'Delimiter:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -242,7 +240,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Width = 17
             Height = 21
             EditLabel.Width = 60
-            EditLabel.Height = 13
+            EditLabel.Height = 21
             EditLabel.Caption = 'Quote char:'
             LabelPosition = lpLeft
             MaxLength = 1

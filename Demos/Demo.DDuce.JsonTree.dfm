@@ -10,7 +10,6 @@ object frmJsonTree: TfrmJsonTree
   Font.Name = 'Segoe UI'
   Font.Style = []
   ShowHint = True
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
     Left = 0

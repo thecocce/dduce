@@ -25,7 +25,7 @@ uses
 
   VirtualTrees, VirtualTrees.Types, VirtualTrees.Header, VirtualTrees.BaseTree,
 
-  zObjInspector, zObjInspTypes,
+  zObjInspector,
 
   DDuce.Components.VirtualTrees.Node, DDuce.Components.SectionTree,
   DDuce.Editor.Interfaces, DDuce.Components.IniTree;
@@ -139,13 +139,13 @@ begin
     pnlObjectInspector
   );
   FObjectInspector.AlignWithMargins       := True;
-  FObjectInspector.ShowReadOnlyProperties := False;
+  //FObjectInspector.ShowReadOnlyProperties := False;
   FObjectInspector.OnBeforeAddItem        := FObjectInspectorBeforeAddItem;
   FObjectInspector.Component              := FTree;
   FSettings := TEditorFactories.CreateSettings(Self);
   FManager  := TEditorFactories.CreateManager(Self, FSettings);
   FEditor   := TEditorFactories.CreateView(pnlEditor, FManager);
-  FEditor.Editor.Highlighter.Colors.LoadFromFile('settings.texteditor.json');
+  //FEditor.Editor.Highlighter.Colors.LoadFromFile('settings.texteditor.json');
   FEditor.HighlighterName := 'INI';
   FEditor.Text := mmoJson.Lines.Text;
 end;

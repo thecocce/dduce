@@ -24,7 +24,7 @@ uses
   System.Classes, System.TypInfo,
   Vcl.Controls, Vcl.Forms,
 
-  zObjInspector, zValueManager;
+  zObjInspector;
 
 type
   TzObjectInspectorFactory = class sealed
@@ -70,7 +70,7 @@ class function TzObjectInspectorFactory.Create(AOwner: TComponent;
 var
   OI : TzObjectInspector;
 begin
-  OI                  := TzObjectInspector.Create(AOwner, AValueManager);
+  OI                  := TzObjectInspector.Create(AOwner);
   OI.Parent           := AParent;
   OI.Align            := alClient;
   OI.AlignWithMargins := False;
